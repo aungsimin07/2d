@@ -3,10 +3,10 @@ name: Scrape and Store
 
 on:
   schedule:
-    # 12:01 PM Asia/Yangon → UTC 05:31
-    - cron:  '31 5 * * *'
-    #  4:30  PM Asia/Yangon → UTC 10:00
-    - cron:  '0 10 * * *'
+    # instead of 05:31, use 05:15 UTC (11:45 Asia/Yangon)
+    - cron: '15 5 * * *'
+    # instead of 10:00, use 09:45 UTC (16:15 Asia/Yangon)
+    - cron: '45 9 * * *'
   workflow_dispatch:
 
 jobs:
